@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #319795;
+}
+.box {
+  width: 550px;
+  background-color: #24232b;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  background-color: white;
+  border-radius: 10px;
+  gap: 1rem;
+}
+.upper {
+  display: flex;
+  flex-direction: column;
+}
+.upper > .gif {
+  width: 120px;
+  align-self: center;
+  margin-bottom: 10px;
+}
+.upper > h2,
+p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.lower {
+  display: flex;
+  flex-direction: column;
+}
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  gap: 0.5rem;
+}
+.result > :nth-child(1) {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 0 15px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.result > :nth-child(1) > span {
+  width: 92%;
+  overflow-x: auto;
+}
+.result > :nth-child(2) {
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: none;
+  padding: 14px;
+  background-color: #43d1cf;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.result > :nth-child(3) {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 0;
+  color: red;
+}
+
+.constraints {
+  display: flex;
+  flex-direction: column;
+}
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+.slider > p {
+  text-align: start;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+.select > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.05rem;
+}
+.select > div > input {
+  width: 1.75rem;
+  accent-color: gray;
+}
+
+@media screen and (max-width: 500px) {
+  .result > :nth-child(1) > span {
+    font-size: 0.68rem;
+  }
+  .result > :nth-child(2) {
+    font-size: 0.8rem;
+  }
+}
